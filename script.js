@@ -44,6 +44,10 @@ const btn = () => {
         message.innerHTML="Entered captcha is not correct"
         message.style.color="#ff2525"
     }
+    if(input.value!==captchaText){
+        generateCaptcha();
+        input.value="";
+    }
 }
 refresh.addEventListener("click", ref);
 input.addEventListener("keyup", validate);
