@@ -25,5 +25,7 @@ function generateCaptcha(){ //generate captcha
 generateCaptcha();
 const refreshBtn=()=>{
     generateCaptcha();
+    input.value="";
+    validate();
 }
 refresh.addEventListener("click",refreshBtn);
