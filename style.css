@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #88004b;
+}
+.container{
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+header{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+.field{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.field input,.field button{
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 10px 20px;
+}
+.field.input,.field button{
+  margin-top: 30px;
+}
+.message{
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+.captcha input{
+    padding: 5px 20px;
+    color: #333;
+    font-size: 22px;
+}
+.refresh{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: #88004b;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.submit button{
+    background: #88004b;
+    color: white;
+    cursor: pointer;
+}
