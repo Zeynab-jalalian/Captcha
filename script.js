@@ -1,6 +1,6 @@
 // DOM
-const captcha=document.querySelector('.captcha');
-const input=document.querySelector('.input');
+const captcha=document.querySelector('.captcha input');
+const input=document.querySelector('.input input');
 const message=document.querySelector('.message');
 const refresh=document.querySelector('.refresh');
 const button=document.querySelector('.btn');
@@ -18,7 +18,9 @@ function generateCaptcha(){ //generate captcha
         return e;
         }
     })
-    let randomCString=changeRandomCArr.join(" ");
+    let captchaText=changeRandomCArr.join(" ");
+    captcha.value=captchaText;
     
 }
 generateCaptcha();
+
