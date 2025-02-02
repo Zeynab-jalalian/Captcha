@@ -34,5 +34,21 @@ const validate=()=>{
    message.classList.remove("active");
  }
 }
+const submitBtn=()=>{
+    captchaText=captchaText
+    .split("")
+    .filter((e)=> e !==" ")
+    .join("");
+    message.classList.add("active");
+    if(captchaText===input.value){
+        message.innerHTML="Entered captcha is correct";
+        message.style.color="#88004b";
+    }else{
+        message.innerHTML="Entered captcha is not correct"
+        message.style.color="#ff2525"
+    }
+
+}
 refresh.addEventListener("click",refreshBtn);
 input.addEventListener("keyup",validate);
+button.addEventListener("click",submitBtn)
