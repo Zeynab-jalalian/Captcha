@@ -45,12 +45,12 @@ header{
     padding: 0 15px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.captcha_box input{
+.captch_box input{
     color: #6b6b6b;
     font-size: 22px;
     pointer-events: none;
 }
-.captcha_box input:focus{
+.captch_box input:focus{
     box-shadow: 0 1px 1px rgba(0,0,0,0.08);
 }
 .message{
