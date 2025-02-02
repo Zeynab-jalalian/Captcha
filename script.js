@@ -23,4 +23,7 @@ function generateCaptcha(){ //generate captcha
     
 }
 generateCaptcha();
-
+const refreshBtn=()=>{
+    generateCaptcha();
+}
+refresh.addEventListener("click",refreshBtn);
