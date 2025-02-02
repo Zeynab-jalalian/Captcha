@@ -18,7 +18,7 @@ function generateCaptcha(){ //generate captcha
         return e;
         }
     })
-    let captchaText=changeRandomCArr.join(" ");
+    captchaText=changeRandomCArr.join(" ");
     captcha.value=captchaText;
     
 }
@@ -28,4 +28,11 @@ const refreshBtn=()=>{
     input.value="";
     validate();
 }
+const validate=()=>{
+ button.parentElement.classList.toggle("disabled",!input.value);
+ if(input.value===""){
+   message.classList.remove("active");
+ }
+}
 refresh.addEventListener("click",refreshBtn);
+input.addEventListener("keyup",validate);
