@@ -18,6 +18,29 @@ const generateCaptcha= ()=>{
 }
 const refreshBtnClick=()=>{
     generateCaptcha();
+    captchInputBox.value="";
+    captchaKeyUpValidate();
+}
+const captchaKeyUpValidate=()=>{
+    submitButton.classList.toggle('disabled',!captchInputBox.value)
+    if(captchInputBox.value==="")
+        message.classList.remove("active")
+}
+const  submitBtnClick=()=>{
+     captchaText=captchaText
+     .split("")
+    .filter((char)=>char !== " ")
+    .join("");
+    message.classList.add("active")
+    if(captchInputBox.value === captchaText){
+        message.innerText="Entered captcha is correct"
+         message.style.color="#826afb"
+    }else{
+          message.innerText="Entered captcha is not correct"
+          message.style.color="#FF2525"
+    }
 }
 refreshButton.addEventListener("click",refreshBtnClick);
+captchInputBox.addEventListener("keyup",captchaKeyUpValidate);
+submitButton.addEventListener("click",submitBtnClick);
 generateCaptcha();

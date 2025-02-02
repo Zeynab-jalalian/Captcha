@@ -63,6 +63,7 @@ header{
     background: #826afb;
     color: #fff;
     cursor: pointer;
+    user-select: none;
 }
 .button button:active{
     transform: scale(0.99);
@@ -85,4 +86,11 @@ header{
 }
 .refresh_button:active{
     transform:translateY(-50%) scale(0.99);
+}
+.button.disabled button{
+    opacity: 0.6;
+    pointer-events: none;
+}
+.message.active{
+    display: block;
 }
