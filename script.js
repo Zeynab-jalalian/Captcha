@@ -16,4 +16,8 @@ const generateCaptcha= ()=>{
     
     
 }
+const refreshBtnClick=()=>{
+    generateCaptcha();
+}
+refreshButton.addEventListener("click",refreshBtnClick);
 generateCaptcha();
